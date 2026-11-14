@@ -24,10 +24,10 @@ class _LoginpageState extends State<Loginpage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: ColorUtils.backgroundColor,
-      body: SafeArea(
-        child: Center(
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: ColorUtils.backgroundColor,
+        body: Center(
           child: SingleChildScrollView(
             padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 24.0),
             child: Column(
