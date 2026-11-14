@@ -15,9 +15,6 @@ class _LoginpageState extends State<Loginpage> {
   final TextEditingController _passwordController = TextEditingController();
   bool _obscurePassword = true;
 
-  //color e fill inputan
-  static const Color _inputFillColor = Color(0xFF484738);
-
   @override
   void dispose() {
     _usernameController.dispose();
@@ -39,10 +36,7 @@ class _LoginpageState extends State<Loginpage> {
                 //kartu_utomo
                 Container(
                   width: double.infinity,
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 20.0,
-                    vertical: 32.0,
-                  ),
+                  padding: const EdgeInsets.fromLTRB(20.0, 32.0, 20.0, 24.0),
                   decoration: BoxDecoration(
                     color: ColorUtils.primaryColor,
                     borderRadius: BorderRadius.circular(12.0),
@@ -76,7 +70,7 @@ class _LoginpageState extends State<Loginpage> {
                             size: 22,
                           ),
                           filled: true,
-                          fillColor: _inputFillColor,
+                          fillColor: ColorUtils.secondaryColor,
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(12.0),
                             borderSide: BorderSide.none,
@@ -89,7 +83,7 @@ class _LoginpageState extends State<Loginpage> {
                       ),
                       const SizedBox(height: 16),
 
-                      // Input Password
+                      //Nginput Password
                       TextField(
                         controller: _passwordController,
                         obscureText: _obscurePassword,
@@ -117,7 +111,7 @@ class _LoginpageState extends State<Loginpage> {
                             },
                           ),
                           filled: true,
-                          fillColor: _inputFillColor,
+                          fillColor: ColorUtils.secondaryColor,
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(12.0),
                             borderSide: BorderSide.none,
@@ -130,7 +124,7 @@ class _LoginpageState extends State<Loginpage> {
                       ),
                       const SizedBox(height: 24),
 
-                      // Tombol Log In
+                      //Perkedel Log In
                       ElevatedButton(
                         onPressed: () {
                           // Handle Login
@@ -147,7 +141,6 @@ class _LoginpageState extends State<Loginpage> {
                         ),
                         child: Text(
                           "Log In",
-                          // Menggunakan copyWith sesuai pencerahan dari teman
                           style: TypographyUtils.subHeading1.copyWith(
                             color: ColorUtils.primaryColor,
                           ),
@@ -155,7 +148,7 @@ class _LoginpageState extends State<Loginpage> {
                       ),
                       const SizedBox(height: 24),
 
-                      // Divider "OR"
+                      //divider "OR"
                       Row(
                         children: [
                           Expanded(
@@ -183,13 +176,13 @@ class _LoginpageState extends State<Loginpage> {
                       ),
                       const SizedBox(height: 24),
 
-                      // Tombol Login with Google
+                      //Perkedel Login with Google
                       ElevatedButton(
                         onPressed: () {
                           // Handle Google Login
                         },
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: _inputFillColor,
+                          backgroundColor: ColorUtils.secondaryColor,
                           elevation: 0,
                           minimumSize: const Size(double.infinity, 52),
                           shape: RoundedRectangleBorder(
@@ -210,17 +203,22 @@ class _LoginpageState extends State<Loginpage> {
                           ],
                         ),
                       ),
-                      const SizedBox(height: 18),
+                      const SizedBox(height: 24),
 
-                      // Forgot password ?
-                      GestureDetector(
-                        onTap: () {
+                      //Lali password
+                      TextButton(
+                        onPressed: () {
                           // Handle forgot password
                         },
+                        style: TextButton.styleFrom(
+                          padding: EdgeInsets.zero,
+                          minimumSize: Size.zero,
+                          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                        ),
                         child: Text(
                           "Forgot password ?",
                           style: TypographyUtils.textL_Medium.copyWith(
-                            color: ColorUtils.tertiaryColor.withValues(alpha: 0.8),
+                            color: ColorUtils.tertiaryColor,
                           ),
                         ),
                       ),
@@ -229,12 +227,12 @@ class _LoginpageState extends State<Loginpage> {
                 ),
                 const SizedBox(height: 16),
 
-                // ================= CARD REGISTER / SIGN UP =================
+                //Kwartu Sign Up
                 Container(
                   width: double.infinity,
                   padding: const EdgeInsets.symmetric(vertical: 18.0),
                   decoration: BoxDecoration(
-                    color: _inputFillColor,
+                    color: ColorUtils.secondaryColor,
                     borderRadius: BorderRadius.circular(12.0),
                   ),
                   child: Center(
@@ -242,7 +240,7 @@ class _LoginpageState extends State<Loginpage> {
                       text: TextSpan(
                         text: "Don’t have an account? ",
                         style: TypographyUtils.textL_Regular.copyWith(
-                          color: ColorUtils.tertiaryColor.withValues(alpha: 0.75),
+                          color: ColorUtils.backgroundColor,
                         ),
                         children: [
                           TextSpan(
@@ -264,7 +262,7 @@ class _LoginpageState extends State<Loginpage> {
     );
   }
 
-  // Widget custom icon Google (G) multi-warna
+  //ikontol gugel
   Widget _buildGoogleIcon() {
     return Image.asset(
       'Assets/img/google_icon.png',
