@@ -3,6 +3,7 @@ import 'package:pookie_chat/component/btnStyle.dart';
 import 'package:pookie_chat/utils/Color.dart';
 import 'package:pookie_chat/utils/Typography.dart';
 import 'package:pookie_chat/views/login/loginpage.dart';
+import 'package:pookie_chat/views/signup/signUp.dart';
 
 class Landingpage extends StatefulWidget {
   const Landingpage({super.key});
@@ -29,23 +30,30 @@ class _LandingpageState extends State<Landingpage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
+                //
                 Text(
                   "Connect Together With Your Friends",
                   textAlign: TextAlign.center,
                   style: TypographyUtils.heading2,
                 ),
+
                 SizedBox(height: 12),
+
+                //
                 Text(
                   "Login  to connecting with your friends",
                   style: TypographyUtils.textL_Regular,
                 ),
+
                 SizedBox(height: 12),
+
+                //
                 ElevatedButton(
                   onPressed: () {
                     Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const Loginpage(),
+                        builder: (context) => const SignupPage(),
                       ),
                     );
                   },
