@@ -10,6 +10,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: 'Pookie Chat', home: Landingpage());
+    return MaterialApp(
+      title: 'Pookie Chat',
+      debugShowCheckedModeBanner: false,
+      home: Landingpage(),
+    );
   }
 }
