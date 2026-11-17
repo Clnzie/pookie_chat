@@ -32,6 +32,7 @@ class _SignupPageState extends State<SignupPage> {
               ),
               child: Column(
                 children: [
+                  // Title
                   Text("Pookie Chat", style: TypographyUtils.heading1),
                   SizedBox(height: 10),
                   Text(
@@ -50,6 +51,8 @@ class _SignupPageState extends State<SignupPage> {
                         ColorUtils.secondaryColor,
                       ),
                     ),
+
+                    // Sign up with Google button
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -70,6 +73,7 @@ class _SignupPageState extends State<SignupPage> {
                     ),
                   ),
 
+                  // Decision line with "Or" text
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 26.0),
                     child: Row(
@@ -94,6 +98,7 @@ class _SignupPageState extends State<SignupPage> {
                     ),
                   ),
 
+                  // If user already have an account, then show the sign in button
                   Container(
                     padding: const EdgeInsets.symmetric(
                       horizontal: 12.0,
